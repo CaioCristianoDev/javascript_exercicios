@@ -67,9 +67,12 @@
                 document.getElementById("imc").innerHTML = imc.toFixed(2);
     
                 let situacaoElement = document.getElementById("situacao");
-                if (imc < 18.5) {
+                if (imc < 17) {
                     situacaoElement.innerHTML = "Muito abaixo do peso";
                     situacaoElement.className = "perigo";
+                } else if (imc < 18.5) {
+                    situacaoElement.innerHTML = "Abaixo do peso";
+                    situacaoElement.className = "alerta";
                 } else if (imc < 24.9) {
                     situacaoElement.innerHTML = "Peso normal";
                     situacaoElement.className = "normal";
